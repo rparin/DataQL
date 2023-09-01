@@ -39,7 +39,7 @@ void SQL::run() {
     int c_index = 0;
     while (input != "exit") {
         c_index++; input = "";
-        if (c_index > _commands.size()) break;
+        if (file && (c_index > _commands.size())) break;
 
         //Get Command from user or file
         if (file) input = _commands[c_index];
@@ -67,7 +67,6 @@ void SQL::run() {
                 << p.is_valid() << endl << endl;
 
             if (p.is_valid()) {
-                cout << input << endl;
 
                 //Select Where
                 if (ptree.contains("where")) {

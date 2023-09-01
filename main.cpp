@@ -13,7 +13,7 @@ using namespace std;
 
 int main() {
 
-    SQL mysql("sample.txt");
+    SQL mysql;
     mysql.run();
 
     cout << endl << "End of Main" << endl;
